@@ -68,7 +68,7 @@ export default function Home() {
       clearInterval(quoteInterval);
       document.removeEventListener('click', handleFirstInteraction);
     };
-  }, [muted]);
+  }, [muted, isPlaying, quotes.length]);
 
   const toggleMute = () => {
     if (audioRef.current) {
